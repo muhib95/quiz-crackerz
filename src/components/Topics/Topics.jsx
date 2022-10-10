@@ -6,12 +6,12 @@ import Topic from '../Topic/Topic';
 const Topics = () => {
   const exams=useLoaderData();
   const {status,data}=exams;
-  console.log(data);
+  // console.log(data);
   return (
     <div>
       <div className='grid md:grid-cols-4 container mx-auto gap-2'>
       {
-        data.map(item=><Topic item={item}></Topic>)
+        data.map(item=><Topic item={item} key={item.id}></Topic>)
       }
       </div>
     
