@@ -4,7 +4,7 @@ import Option from '../Option/Option';
 const Qitem = ({qitem}) => {
   const {correctAnswer,question,options}=qitem;
   
-  console.log(qitem);
+ 
   return (
     <div className='flex flex-col border-2 border-sky-500'>
 <div className='flex justify-center'>
@@ -13,7 +13,7 @@ const Qitem = ({qitem}) => {
 </div>
 <div >
 {
-  options.map(option=><Option option={option}></Option>)
+  options.map(option=><Option option={option} question={question}></Option>)
 }
 </div>
 

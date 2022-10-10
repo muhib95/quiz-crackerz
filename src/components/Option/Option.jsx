@@ -1,10 +1,14 @@
 import React from 'react';
 
-const Option = ({option}) => {
+const Option = ({option,question}) => {
+
   
   return (
     <div>
-      <h1>{option}</h1>
+    
+    <input type="radio" value={option} name={question} />{option}
+
+   
     </div>
   );
 };
