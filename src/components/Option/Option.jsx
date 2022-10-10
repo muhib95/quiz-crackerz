@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Option = ({option,question}) => {
+const Option = ({option,question,trueFalseCheck}) => {
 
   
   return (
     <div>
     
-    <input type="radio" value={option} name={question} />{option}
+    <input type="radio" value={option} name={question} onClick={()=>trueFalseCheck(option)} />{option}
 
    
     </div>

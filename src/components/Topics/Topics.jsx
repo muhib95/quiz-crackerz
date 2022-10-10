@@ -5,7 +5,7 @@ import Topic from '../Topic/Topic';
 
 const Topics = () => {
   const exams=useLoaderData();
-  const {status,data}=exams;
+  const {data}=exams;
   // console.log(data);
   return (
     <div>
