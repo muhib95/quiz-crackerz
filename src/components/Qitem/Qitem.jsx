@@ -1,6 +1,7 @@
 import {EyeIcon } from '@heroicons/react/24/solid'
 import Option from '../Option/Option';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Qitem = ({qitem}) => {
 
  
@@ -8,20 +9,23 @@ const Qitem = ({qitem}) => {
   const {correctAnswer,question,options}=qitem;
   
   const showCorrect=(ans)=>{
-    alert(ans);
-
+    
+    toast.success(ans, {
+      position: toast.POSITION.TOP_CENTER
+    });
   }
   const trueFalseCheck=(optionCheck)=>{
    
     if(optionCheck===correctAnswer){
-    
-      
-alert('True');
+      toast.success('True', {
+        position: toast.POSITION.TOP_CENTER
+      });
 
     }
     else{
-      
-      alert('False');
+      toast.success('False', {
+        position: toast.POSITION.TOP_CENTER
+      });
     }
 
   }
@@ -45,7 +49,7 @@ alert('True');
 
 
     </div>
-   
+    <ToastContainer />
     </div>
 
   );
