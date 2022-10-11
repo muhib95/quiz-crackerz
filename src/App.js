@@ -24,6 +24,7 @@ children:[
     element:<Topics></Topics>,
    
   },
+ 
   {
     path:'/topic/:id',
     loader:async({params})=>{
