@@ -9,7 +9,7 @@ const Question = () => {
   
   return (
     <div>
-      <h2>Quize of {name}</h2>
+      <h2 className='text-3xl'>Quize of {name}</h2>
       <div className='grid grid-cols-1 gap-5 container mx-auto'>
         {
 questions.map(qitem=><Qitem qitem={qitem} key={qitem.id}></Qitem>)

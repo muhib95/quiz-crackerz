@@ -10,7 +10,7 @@ const Qitem = ({qitem}) => {
   
   const showCorrect=(ans)=>{
     
-    toast.success(ans, {
+    toast.success('correct ans: '+ans, {
       position: toast.POSITION.TOP_CENTER
     });
   }
@@ -34,12 +34,12 @@ const Qitem = ({qitem}) => {
   return (
     <div>
           <div className='flex flex-col border-2 border-sky-500'>
-<div className='flex justify-center'>
+<div className='flex justify-center bg-red-300 text-3xl p-2'>
 <div dangerouslySetInnerHTML={{__html:question}}></div>
 <button  onClick={()=>showCorrect(correctAnswer)}><EyeIcon  className="h-6 w-6 text-blue-500"/></button>  
 
 </div>
-<div >
+<div className='grid md:grid-cols-2 gap-1 w-85 container mx-auto p-3 bg-fuchsia-800'>
 {
   options.map(option=><Option option={option} question={question} trueFalseCheck={trueFalseCheck}></Option>)
 }
