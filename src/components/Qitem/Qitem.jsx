@@ -1,14 +1,18 @@
-import React from 'react';
 import Option from '../Option/Option';
 
-const Qitem = ({qitem}) => {
+const Qitem = ({qitem,status}) => {
+ 
   const {correctAnswer,question,options}=qitem;
+  
   const showCorrect=(ans)=>{
     alert(ans);
 
   }
   const trueFalseCheck=(optionCheck)=>{
+   
     if(optionCheck===correctAnswer){
+    
+      
 alert('True');
     }
     else{
@@ -16,9 +20,10 @@ alert('True');
     }
 
   }
- 
+  
   return (
-    <div className='flex flex-col border-2 border-sky-500'>
+    <div>
+          <div className='flex flex-col border-2 border-sky-500'>
 <div className='flex justify-center'>
 <div dangerouslySetInnerHTML={{__html:question}}></div>
 
@@ -31,7 +36,15 @@ alert('True');
 </div>
 
 <button onClick={()=>showCorrect(correctAnswer)}>Show</button>  
+
     </div>
+    {/* <div>
+  {
+    <CorrectWrong correct={correct}></CorrectWrong>
+  }
+</div> */}
+    </div>
+
   );
 };
 
