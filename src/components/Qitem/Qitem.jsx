@@ -1,7 +1,10 @@
+import {EyeIcon } from '@heroicons/react/24/solid'
 import Option from '../Option/Option';
 
-const Qitem = ({qitem,status}) => {
+const Qitem = ({qitem}) => {
+
  
+
   const {correctAnswer,question,options}=qitem;
   
   const showCorrect=(ans)=>{
@@ -14,20 +17,23 @@ const Qitem = ({qitem,status}) => {
     
       
 alert('True');
+
     }
     else{
+      
       alert('False');
     }
 
   }
   
+ 
   return (
     <div>
           <div className='flex flex-col border-2 border-sky-500'>
 <div className='flex justify-center'>
 <div dangerouslySetInnerHTML={{__html:question}}></div>
+<button  onClick={()=>showCorrect(correctAnswer)}><EyeIcon  className="h-6 w-6 text-blue-500"/></button>  
 
-<h3>Correct ans:{correctAnswer}</h3>
 </div>
 <div >
 {
@@ -35,14 +41,11 @@ alert('True');
 }
 </div>
 
-<button onClick={()=>showCorrect(correctAnswer)}>Show</button>  
+
+
 
     </div>
-    {/* <div>
-  {
-    <CorrectWrong correct={correct}></CorrectWrong>
-  }
-</div> */}
+   
     </div>
 
   );
