@@ -5,7 +5,6 @@ const Statistics = () => {
   const datas=useLoaderData();
   const {data}=datas;
 
-  console.log(data);
   return (
     <div className='flex justify-center mt-4 overflow-x-scroll md:overflow-hidden'>
       <LineChart width={500} height={400}me='w-32 h-60'  data={data}>
