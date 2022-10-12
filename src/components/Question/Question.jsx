@@ -8,8 +8,6 @@ const Question = () => {
   const {name, questions}=data;
   const [s,setS]=useState(0);
   const [s1,setS1]=useState(0);
-  console.log('T'+s);
-  console.log('f'+s1);
   return (
     <div>
       <div>
