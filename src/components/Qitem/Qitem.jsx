@@ -41,7 +41,7 @@ const Qitem = ({qitem}) => {
 </div>
 <div className='grid md:grid-cols-2 gap-1 w-85 container mx-auto p-3 bg-fuchsia-800'>
 {
-  options.map(option=><Option option={option} question={question} trueFalseCheck={trueFalseCheck}></Option>)
+  options.map((option,index)=><Option key={index} option={option} question={question} trueFalseCheck={trueFalseCheck}></Option>)
 }
 </div>
 
