@@ -2,9 +2,10 @@ import {EyeIcon } from '@heroicons/react/24/solid'
 import Option from '../Option/Option';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const Qitem = ({qitem}) => {
 
- 
+const Qitem = ({qitem,ss,ss1}) => {
+  const [s,setS]=ss;
+  const [s1,setS1]=ss1;
 
   const {correctAnswer,question,options}=qitem;
   
@@ -17,12 +18,14 @@ const Qitem = ({qitem}) => {
   const trueFalseCheck=(optionCheck)=>{
    
     if(optionCheck===correctAnswer){
+      setS(s+1);
       toast.success('True', {
         position: toast.POSITION.TOP_CENTER
       });
 
     }
     else{
+      setS1(s1+1);
       toast.success('False', {
         position: toast.POSITION.TOP_CENTER
       });
